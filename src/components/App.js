@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import SongList from './SongList';
+import './App.css'
 
 export default class App extends React.Component {
     
@@ -15,15 +16,15 @@ export default class App extends React.Component {
         }
         return hashParams;
       }
-    state = {access_token: this.getHashParams().access_token || '', songs: []}
+    state = {access_token: this.getHashParams().access_token || '', artists: []}
     cards;
     getTopSongs = async () => {
-        let res = await axios.get(`http://localhost:8888/topsongs?token=${this.state.access_token}`)
-        let songs = res.data.result
-        this.cards = <SongList songs={songs}/>
-        this.setState({songs})
+        let res = await axios.get(`http://localhost:8888/topartists?token=${this.state.access_token}`)
+        let artists = res.data.result
+        this.cards = <SongList artists={artists}/>
+        this.setState({artists})
     }
-    button = this.state.access_token === '' ? <a href="http://localhost:8888/login">Login to Spotify</a> : <button onClick={this.getTopSongs}>Get Top Songs</button>
+    button = this.state.access_token === '' ? <a className='button' href="http://localhost:8888/login">Login to Spotify</a> : <button className="button" onClick={this.getTopSongs}>Get Top Artists</button>
 
     
     render() {

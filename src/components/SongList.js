@@ -1,18 +1,19 @@
 import React from 'react';
 import SongCard from './SongCard';
 
-const SongList = ({songs}) => {
-    if(!songs)
+const SongList = ({artists}) => {
+
+    if(!artists)
     {
 
         return <div>songs will go here</div>
         
     }
-    console.log(songs)
-    const list = songs.map((song) => {
-        return <SongCard artist={song.artist} img={song.img} song={song.song}/>
+    console.log(artists)
+    const list = artists.map((artist) => {
+        return <SongCard onclick={(event)=>console.log(this.key)} key={artist.id} artist={artist.artist} img={artist.img} genres={artist.genres}/>
     })
-    return <div style={{display: 'grid', gridTemplateColumns:'auto auto auto', gridGap:'6px'}}>{list}</div>
+    return <div >{list}</div>
 }
 
 export default SongList;
