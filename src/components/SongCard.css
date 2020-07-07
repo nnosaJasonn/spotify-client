@@ -1,13 +1,12 @@
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 1s;
-    height: 10rem;
-    width: 25rem;
+    height: 7rem;
+    width: 20rem;
     display: flex;
     background-color: #F0E2E7;
     border-radius:30%;
     box-sizing: content-box;
-  
 }
 .card p{
     border-radius:30%;  
@@ -22,6 +21,16 @@
     overflow: scroll;
   }
 
+  .full {
+    width : 50%;
+    
+  }
+
+  .shrink {
+    width: 0%;
+    transition: all ease-in-out 1s; 
+  }
+
   .vis {
       visibility: visible;
       transition: all ease-in-out
@@ -32,19 +41,43 @@
       transition: all ease-in-out;
       display: none;
   }
+
+  .arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    cursor: pointer;
+    
+  }
+
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    position: relative;
+    top: 1.5rem;
+    transition: all ease-in-out 1s;
+  }
+  
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    position: relative;
+    top: 3rem;
+    transition: all ease-in-out 1s;
+  }
+
   .pill {
 
     border-radius:30%;
     box-sizing: content-box;
-    transition: height 1s ease-in, width 1ms ease-in-out;
+    transition: height 1s ease-in-out, width 1s ease-in-out;
     display: flex;
-    height: 5rem;
+    height: 3.5rem;
     width: 10rem;
   }
 
   .pill h4 {
     vertical-align: middle;
   }
-  .pill:hover {
-    cursor: pointer;
-  }
+  
