@@ -1,6 +1,6 @@
 import React from 'react';
 import SongCard from './SongCard';
-import { render } from '@testing-library/react';
+
 
 class SongList extends React.Component {
 
@@ -16,7 +16,7 @@ class SongList extends React.Component {
     }
 
     list = this.props.artists.map((artist) => {
-        return <SongCard  selectArtist={this.selectArtist} key={artist.id} artist={artist.artist} img={artist.img} genres={artist.genres}/>
+        return <SongCard  selectArtist={this.selectArtist} key={artist.id} id={artist.id} artist={artist.artist} img={artist.img} genres={artist.genres}/>
     })
 
     render() {

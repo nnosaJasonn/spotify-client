@@ -11,7 +11,7 @@ class SongCard extends React.Component {
             img: this.props.img,
             genre: this.props.genres
         }
-        
+
         if(selected)
         {
             this.props.selectArtist(obj, true);
@@ -30,7 +30,7 @@ class SongCard extends React.Component {
     
     render() {
         let arr = Object.values(this.props.genres).map((k) => {
-            return <span onClick={this.addToGenres}>{k}</span>
+            return <span key={k} onClick={this.addToGenres}>{k}</span>
         })
         return(
         <div  className={this.state.expanded ? 'card' : 'pill'}>
