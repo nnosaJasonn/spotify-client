@@ -7,6 +7,7 @@
     background-color: #F0E2E7;
     border-radius:30%;
     box-sizing: content-box;
+    margin: 5px;
 }
 .card p{
     border-radius:30%;  

@@ -1,6 +1,6 @@
 import React from 'react';
 import SongCard from './SongCard';
-
+import './SongList.css';
 
 class SongList extends React.Component {
 
@@ -22,9 +22,7 @@ class SongList extends React.Component {
     render() {
         
         return (
-            <div>
-                <div>{this.list}</div>
-            </div>
+                <div className="cardContainer">{this.list}</div>
             )
     }
 }

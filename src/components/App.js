@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import SongList from './SongList';
+import Header from './Header';
 import './App.css'
 
 export default class App extends React.Component {
@@ -31,10 +32,13 @@ export default class App extends React.Component {
         return (
 
             <div>
-                
-                {this.button}
-                
-                {this.cards}
+                <div className="headerCard">
+                    
+                    {this.button}
+                </div>
+
+                    {this.cards}
+
             </div>
         )
     }

@@ -12,6 +12,7 @@
 	text-decoration:none;
 	text-shadow:1px 1px 5px #2A5033;
 }
+
 .button:hover {
 	background:linear-gradient(to bottom, #87C094 5%, #87C094 100%);
 	background-color:#5cbf2a;
@@ -24,4 +25,13 @@
 body {
     background: rgb(0,0,0);
 background: linear-gradient(322deg, rgba(0,0,0,1) 0%, rgba(193,120,23,1) 35%, rgba(178,13,48,0.6) 100%);
+}
+
+.headerCard {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	padding: 5rem;
+	height: 40%;
+	width: 80%;
+	box-sizing: content-box;
+	border-radius: 7px;
 }

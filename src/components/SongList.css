@@ -1,0 +1,7 @@
+.cardContainer {
+    padding: 5rem;
+    align-items: center;
+    margin: auto;
+    display: grid;
+	grid-template-columns: repeat(auto-fill, 22rem)
+}
